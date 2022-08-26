@@ -1,10 +1,11 @@
 #img-home{
     background-image: url("/assets/images/home.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
     height: 100%;
     
 }
 
 .padding-50{
- padding: 150px 50px 150px 50px;
+ padding: 100px 50px 100px 50px;
 }
