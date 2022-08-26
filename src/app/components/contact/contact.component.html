@@ -1,34 +1,41 @@
 <app-header></app-header>
 <!-- Wrapper container -->
-<div class="container py-4">
-    <h1 class="m-5">Contact</h1>
-    <!-- Bootstrap 5 starter form -->
-    <form id="contactForm">
-  
-      <!-- Name input -->
-      <div class="mb-3">
-        <label class="form-label" for="name">Nom Prénom</label>
-        <input class="form-control" id="name" type="text" placeholder="Name" />
-      </div>
-  
-      <!-- Email address input -->
-      <div class="mb-3">
-        <label class="form-label" for="emailAddress">Email</label>
-        <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" />
-      </div>
-  
-      <!-- Message input -->
-      <div class="mb-3">
-        <label class="form-label" for="message">Message</label>
-        <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;"></textarea>
-      </div>
-  
-      <!-- Form submit button -->
-      <div class="d-grid">
-        <button class="btn btn-primary btn-lg" type="submit">Envoyer</button>
-      </div>
-  
-    </form>
+<div class="container py-4 mb-5">
+    <div class="row">
+        <div class="col mt-5">
+            <img [src]="imageSrc" alt="" srcset="" class="img-fluid img-thumbnail border-info">
+        </div>
+        <div class="col">
+            <h1 class="m-5">Contact</h1>
+            <!-- Bootstrap 5 starter form -->
+            <form id="contactForm">
+          
+              <!-- Name input -->
+              <div class="mb-3">
+                <label class="form-label" for="name">Nom Prénom</label>
+                <input class="form-control" id="name" type="text" placeholder="Name" />
+              </div>
+          
+              <!-- Email address input -->
+              <div class="mb-3">
+                <label class="form-label" for="emailAddress">Email</label>
+                <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" />
+              </div>
+          
+              <!-- Message input -->
+              <div class="mb-3">
+                <label class="form-label" for="message">Message</label>
+                <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;"></textarea>
+              </div>
+          
+              <!-- Form submit button -->
+              <div class="d-grid">
+                <button class="btn btn-primary btn-lg" type="submit">Envoyer</button>
+              </div>
+          
+            </form>
+        </div>
+    </div>
   
   </div>
 <app-footer></app-footer>

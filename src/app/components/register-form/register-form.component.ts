@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterFormComponent implements OnInit {
 
+  imageSrc = 'assets/images/register.jpg';
   constructor() { }
 
   ngOnInit(): void {
