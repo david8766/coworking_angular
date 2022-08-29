@@ -1,0 +1,126 @@
+{
+    "users": [
+        {
+            "user_id": 1,
+            "lastname": "Dupont",
+            "firstname": "Jean",
+            "address": "15 rue Victor Hugo",
+            "zipcode": "75018",
+            "city": "Paris",
+            "phone": "0145689965"
+        },
+        {
+            "user_id": 2,
+            "lastname": "Martin",
+            "firstname": "Phillip",
+            "address": "18 rue des lilas",
+            "zipcode": "13000",
+            "city": "Marseille",
+            "phone": "0945689965"
+        },
+        {
+            "user_id": 3,
+            "lastname": "Morris",
+            "firstname": "Barnabé",
+            "address": "25 rue des près",
+            "zipcode": "75018",
+            "city": "Paris",
+            "phone": "0945689965"
+        }
+    ],
+    "spaces": [
+        {
+            "space_id": 1,
+            "name": "Panam coworking",
+            "address": "17 rue des fusibles",
+            "zipcode": "75005",
+            "city" : "Paris",
+            "web" : "adresse.web@net.fr",
+            "location": "546546565.32,5467967693.32",
+            "epci": "epci",
+            "departement": "dep",
+            "region": "region"
+        },
+        {
+            "space_id": 2,
+            "name": "Panam2 coworking",
+            "address": "17 rue des palmiers",
+            "zipcode": "75012",
+            "city" : "Paris",
+            "web" : "adresse.web@net.fr",
+            "location": "546546565.32,5467967693.32",
+            "epci": "epci",
+            "departement": "dep",
+            "region": "region"
+        },
+        {
+            "space_id": 3,
+            "name": "Mars coworking",
+            "address": "23 rue des églantiers",
+            "zipcode": "13005",
+            "city" : "Marseille",
+            "web" : "adresse.web@net.fr",
+            "location": "546546565.32,5467967693.32",
+            "epci": "epci",
+            "departement": "dep",
+            "region": "region"
+        },
+        {
+            "space_id": 4,
+            "name": "Mars2 coworking",
+            "address": "17 rue des poissons",
+            "zipcode": "13000",
+            "city" : "Marseille",
+            "web" : "adresse.web@net.fr",
+            "location": "546546565.32,5467967693.32",
+            "epci": "epci",
+            "departement": "dep",
+            "region": "region"
+        },
+        {
+            "space_id": 5,
+            "name": "Lyon coworking",
+            "address": "17 rue des mimosas",
+            "zipcode": "69000",
+            "city" : "Lyon",
+            "web" : "adresse.web@net.fr",
+            "location": "546546565.32,5467967693.32",
+            "epci": "epci",
+            "departement": "dep",
+            "region": "region"
+        },
+        {
+            "space_id": 6,
+            "name": "Lyon2 coworking",
+            "address": "18 rue des roses",
+            "zipcode": "69000",
+            "city" : "Lyon",
+            "web" : "adresse.web@net.fr",
+            "location": "546546565.32,5467967693.32",
+            "epci": "epci",
+            "departement": "dep",
+            "region": "region"
+        }
+    ],
+    "reservations": [
+        {
+            "reservation_id": 1,
+            "amount": 12.00,
+            "user_id": 1,
+            "space_id": 1
+        },
+
+        {
+            "reservation_id": 2,
+            "amount": 12.00,
+            "user_id": 1,
+            "space_id": 2
+        },
+        {
+            "reservation_id": 3,
+            "amount": 12.00,
+            "user_id": 2,
+            "space_id": 2
+        }
+    ]
+}

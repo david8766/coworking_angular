@@ -14,6 +14,7 @@ import { DetailComponent } from './components/detail/detail.component';
 import { SpaceComponent } from './components/space/space.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProfilComponent } from './components/profil/profil.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { ProfilComponent } from './components/profil/profil.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
