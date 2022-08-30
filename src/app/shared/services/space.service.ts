@@ -7,7 +7,7 @@ import { Space } from '../interfaces/space';
   providedIn: 'root'
 })
 export class SpaceService {
-  private _baseUrl = environment.urlApi + '/spaces';
+  private _baseUrl = environment.urlApi + '/space/limit';
   spaces$: any;
 
   constructor(private _http: HttpClient) { }

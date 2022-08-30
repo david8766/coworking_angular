@@ -8,13 +8,15 @@ import { Space } from 'src/app/shared/interfaces/space';
   styleUrls: ['./spaces.component.css']
 })
 export class SpacesComponent implements OnInit {
-
-  imageSrc1 = 'assets/images/img1.jpg'
-  imageSrc2 = 'assets/images/img2.jpg'
-  imageSrc3 = 'assets/images/img3.jpg'
-  imageSrc4 = 'assets/images/img1.jpg'
-  imageSrc5 = 'assets/images/img2.jpg'
-  imageSrc6 = 'assets/images/img3.jpg'
+  
+  images: Array<String> = [
+    'assets/images/img1.jpg',
+    'assets/images/img2.jpg',
+    'assets/images/img3.jpg',
+    'assets/images/img4.jpg',
+    'assets/images/img5.jpg',
+    'assets/images/img6.jpg'
+  ]
   
   public spaces? : Space[];
   

@@ -1,11 +1,11 @@
 <div class="container-fluid p-5">
     <div class="row m-5">       
-        <div class="col-4" *ngFor="let space of spaces">
+        <div class="col-4" *ngFor="let space of spaces;let index = index">
             <div class="card text-white bg-custom m-4 border-dark">
-            <div class="card-header"><img [src]="imageSrc1" alt="" srcset="" class="img-fluid"></div>
+            <div class="card-header"><img src="{{images[index]}}" alt="" srcset="" class="img-fluid"></div>
             <div class="card-body bg-white text-dark">
                 <h4 class="card-title">{{space.city}}</h4>
-                <p class="card-text">Espace de coworking de 56 places</p>
+                <p class="card-text">{{space.address}}</p>
                 <a [routerLink]="['detail']" class="btn btn-info">Voir les détails</a>
             </div>
         </div>
