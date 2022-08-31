@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { Router } from '@angular/router';
 import { User } from 'src/app/shared/interfaces/user';
 import { UserService } from 'src/app/shared/services/user.service';
 
@@ -11,6 +12,7 @@ import { UserService } from 'src/app/shared/services/user.service';
 export class RegisterFormComponent  {
 
   user?: User;
+  userId?: Number;
 
   myForm = new FormGroup({
     firstname: new FormControl(''),
@@ -25,7 +27,7 @@ export class RegisterFormComponent  {
 
   imageSrc = 'assets/images/register.jpg';
 
-  constructor(private _userService: UserService) { }
+  constructor(private _userService: UserService, private router: Router) { }
 
   onSubmit(){
     //console.log(this.myForm);
@@ -43,9 +45,15 @@ export class RegisterFormComponent  {
       };
       //console.log(adduser);
       this._userService.createUser(adduser).subscribe(
+
+      data=>{
+        console.log(data.id)
         
-        data=>console.log(data)
-        
+        this.router.navigate(
+          ['/profil/', data.id], 
+        );
+      }
+      
       ); 
       
     }

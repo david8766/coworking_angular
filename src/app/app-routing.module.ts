@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'inscription', component: RegisterComponent },
   { path: 'detail/:id', component: DetailComponent },
   { path: 'contact', component: ContactComponent},
-  { path: 'profil', component: ProfilComponent}
+  { path: 'profil/:id', component: ProfilComponent}
 ];
 
 @NgModule({
