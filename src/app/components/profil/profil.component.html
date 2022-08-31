@@ -7,14 +7,14 @@
                 <img [src]="imageSrc" alt="" srcset="" class="img-fluid img-thumbnail border-info">
             </div>
             <div class="col font-custom">
-                <p>Nom: Dupond</p>
-                <p>Prénom : Jean</p>
-                <p>Adresse: 15 rue des lilas</p>
-                <p>Code postal : 75018</p>
-                <p>Ville: Paris</p>
-                <p>Email : Dupond.Jean@gmail.com</p>
-                <p>Mot de passe : panpan</p>
-                <p>Téléphone: 01.12.13.15.16</p>
+                <p *ngIf="user">Nom: {{ user.lastname }}</p>
+                <p *ngIf="user">Prénom : {{ user.firstname }}</p>
+                <p *ngIf="user">Adresse: {{ user.address }}</p>
+                <p *ngIf="user">Code postal : {{ user.zipcode }}</p>
+                <p *ngIf="user">Ville: {{ user.city }}</p>
+                <p *ngIf="user">Email : {{ user.email }}</p>
+                <p *ngIf="user">Mot de passe : {{ user.password }}</p>
+                <p *ngIf="user">Téléphone: {{ user.phone }}</p>
             </div>
         </div>
         <hr>

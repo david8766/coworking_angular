@@ -14,4 +14,8 @@ export class UserService {
   public createUser(user: User) {
     return this._http.post<User>(this._baseUrl + '/user', user);
   }
+
+  public findById(id: number) {
+    return this._http.get<User>(this._baseUrl + '/user/' + id);
+  }
 }
