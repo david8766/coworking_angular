@@ -1,18 +1,20 @@
 <div class="container-fluid">
-    <h1 class="text-center mt-5">Détail de l'espace</h1>
+    <h1 class="text-center mt-5" *ngIf="space">Détail de l'espace "{{space.name}}"</h1>
 
     <div class="container">
         <div class="row">
             <div class="col mt-5">
                 <img [src]="imageSrc" alt="" srcset="" class="img-fluid img-thumbnail border-info">
-                <p class="text-center">Paris - Espace de coworking de 56 places</p>
+                <p class="text-center" *ngIf="space">{{ space.city }}  | {{ space.department }} | {{ space.region }}</p>
+                <a href="http://{{ space.web }}" target="_blank" rel="noopener noreferrer" *ngIf="space">{{ space.web }}</a>
             </div>
             <div class="col mt-4">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.76457543198!2d2.2769955414867997!3d48.858946580710985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!5e0!3m2!1sen!2sfr!4v1661518648128!5m2!1sen!2sfr"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <p></p>
+                <p *ngIf="space">{{ space.address }} - {{ space.zipcode }}</p>
+            
             </div>
         </div>
         <hr>
