@@ -6,8 +6,9 @@
             <div class="card-body bg-white text-dark">
                 <h4 class="card-title">{{space.city}}</h4>
                 <p class="card-text">{{space.address}}</p>
-                <a [routerLink]="['detail']" class="btn btn-info">Voir les détails</a>
+                <a [routerLink]="['detail/', space.space_id]" class="btn btn-info">Voir les détails</a>
             </div>
         </div>
     </div>
 </div>
+

@@ -17,4 +17,10 @@ export class SpaceService {
   public findCities() {
     return this._http.get<String[]>(this._baseUrl + '/space/cities');
   }
+  public findByCity(city: string) {
+    return this._http.get<Space[]>(this._baseUrl + '/space/city/' + city);
+  }
+  public findById(id: number) {
+    return this._http.get<Space>(this._baseUrl + '/space/' + id);
+  }
 }

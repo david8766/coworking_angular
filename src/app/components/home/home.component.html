@@ -2,17 +2,16 @@
     <div class="container">
         <div class="row padding-50">
             <form class="d-flex">
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" aria-label="Default select example" #selectTag (change)="onCitySelected(selectTag.value)">
                     <option selected>Sélectionner une ville</option>
-                    <option *ngFor="let city of cities; let index = index">
+                    <option *ngFor="let city of cities" [value]="city">
 
                         {{ city }}
 
                     </option>
                 </select>
-                <button class="btn btn-info my-2 my-sm-0" type="submit">Valider</button>
             </form>
         </div>
     </div>
-    <app-spaces></app-spaces>
+    <app-spaces [city]="spaceValue"></app-spaces>
 </div>

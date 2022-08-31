@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,Input,EventEmitter } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Space } from 'src/app/shared/interfaces/space';
 import { SpaceService } from 'src/app/shared/services/space.service';
@@ -10,9 +10,17 @@ import { SpaceService } from 'src/app/shared/services/space.service';
 })
 export class HomeComponent implements OnInit {
 
-  imageSrc = 'assets/images/home.png'
+  spaceValue: string = "";
+
+  imageSrc = 'assets/images/home.png';
 
   public cities?: String[];
+
+  
+
+  onCitySelected(selected: string) {
+    this.spaceValue = selected;
+  }
 
   constructor(private _spaceService: SpaceService) { }
 
@@ -23,7 +31,7 @@ export class HomeComponent implements OnInit {
 
         this.cities = data;
 
-        console.log(data);
+        //console.log(data);
 
       },
 
@@ -35,5 +43,6 @@ export class HomeComponent implements OnInit {
 
     );
   }
+
 
 }
