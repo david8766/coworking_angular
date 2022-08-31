@@ -16,6 +16,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ProfilComponent } from './components/profil/profil.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,8 +36,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
-    
+    HttpClientModule,       
   ],
   providers: [],
   bootstrap: [AppComponent]

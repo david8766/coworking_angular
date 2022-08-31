@@ -1,5 +1,6 @@
 <div class="container-fluid" id="img-home">
     <div class="container">
+        <h1 class="text-primary text-center pt-5"><i class="fa-solid fa-house-laptop"></i> SpaceCoworking - Travaillez de manière indépendante, pas seul.</h1>
         <div class="row padding-50">
             <form class="d-flex">
                 <select class="form-select" aria-label="Default select example" #selectTag (change)="onCitySelected(selectTag.value)">
@@ -13,5 +14,6 @@
             </form>
         </div>
     </div>
+    <hr class="text-white">
     <app-spaces [city]="spaceValue"></app-spaces>
 </div>
