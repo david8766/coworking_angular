@@ -15,6 +15,7 @@ import { SpaceComponent } from './components/space/space.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProfilComponent } from './components/profil/profil.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -30,13 +31,14 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     DetailComponent,
     SpaceComponent,
     ContactComponent,
-    ProfilComponent
+    ProfilComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,       
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
