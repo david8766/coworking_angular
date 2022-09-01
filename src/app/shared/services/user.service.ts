@@ -18,4 +18,8 @@ export class UserService {
   public findById(id: number) {
     return this._http.get<User>(this._baseUrl + '/user/' + id);
   }
+
+  public checkUser(email: string, password: string) {
+    return this._http.get<User>(this._baseUrl + '/user/' + email + '/' + password);
+  }
 }

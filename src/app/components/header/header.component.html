@@ -12,37 +12,43 @@
           <li class="nav-item">
             <a class="nav-link btn" [routerLink]="['contact']">Contact</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="!isConnect">
             <a class="nav-link btn" (click)="open(content)">Connexion</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="!isConnect">
             <a class="nav-link btn" [routerLink]="['inscription']">Inscription</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link btn" [routerLink]="['profil/8']">Mon compte</a>
+          <li class="nav-item" *ngIf="isConnect">
+            <a class="nav-link btn" [routerLink]="['profil/', userConnect.id]">Mon compte</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <div class="alert alert-danger m-0 text-center" role="alert" *ngIf="errorLogin">
+    Erreur d'authentification.Veuillez vous reconnecter.
+  </div>
+
 <!-- Modal -->
 <ng-template #content let-modal>
+  <form
+  [formGroup]="form"
+  >
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title">Connexion</h4>
     <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
   </div>
   <div class="modal-body">
-    <form>
       <div class="form-group">
-        <input type="email" class="form-control" id="email1"placeholder="Votre email...">
+        <input type="text" class="form-control" id="email" name ="email" placeholder="Votre email..." formControlName="email">
       </div>
       <div class="form-group mt-3">
-        <input type="password" class="form-control" id="password1" placeholder="Votre mot de page...">
+        <input type="password" class="form-control" id="password" name="password" placeholder="Votre mot de passe..." formControlName="password">
       </div>
-    </form>
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-info" (click)="modal.close('Save click')">Login</button>
-  </div>
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-info" data-bs-dismiss="modal" (click)="onSubmit()" (click)="modal.dismiss('click')">Login</button>
+    </div>
+  </form>
 </ng-template>
