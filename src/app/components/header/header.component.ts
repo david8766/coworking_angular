@@ -80,7 +80,10 @@ export class HeaderComponent implements OnInit  {
       } 
   }
 
-
+  seDeco(){
+    this._authService.deconnecter();
+    window.location.reload();
+  }
 
 
 

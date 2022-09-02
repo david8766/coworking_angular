@@ -21,6 +21,9 @@
           <li class="nav-item" *ngIf="isConnect">
             <a class="nav-link btn" [routerLink]="['profil/', userConnect.id]">Mon compte</a>
           </li>
+          <li class="nav-item" *ngIf="isConnect">
+            <a class="nav-link btn" (click)="seDeco()">Se déconnecter</a>
+          </li>
         </ul>
       </div>
     </div>
