@@ -7,9 +7,6 @@ import { User } from 'src/app/shared/interfaces/user';
 import { UserService } from 'src/app/shared/services/user.service';
 
 
-
-
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -84,9 +81,6 @@ export class HeaderComponent implements OnInit  {
     this._authService.deconnecter();
     window.location.reload();
   }
-
-
-
 
   //--------------------------------------------------------------------
   // Fenêtre modale
