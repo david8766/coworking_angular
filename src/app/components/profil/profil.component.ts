@@ -10,22 +10,23 @@ import { UserService } from 'src/app/shared/services/user.service';
   styleUrls: ['./profil.component.css']
 })
 export class ProfilComponent implements OnInit {
-
+  
   user?: User;
   isConnect = false;
-
+  validate = false;
+  
   myForm = new FormGroup({
-    id: new FormControl(),
-    firstname: new FormControl(''),
-    lastname: new FormControl(''),
-    address: new FormControl(''),
-    zipcode: new FormControl(''),
-    city: new FormControl(''),
-    email: new FormControl(''),
-    password: new FormControl(''),
-    phone: new FormControl(''),
+    id: new FormControl(this.user?.id),
+    firstname: new FormControl(this.user?.firstname),
+    lastname: new FormControl(this.user?.lastname),
+    address: new FormControl(this.user?.address),
+    zipcode: new FormControl(this.user?.zipcode),
+    city: new FormControl(this.user?.city),
+    email: new FormControl(this.user?.email),
+    password: new FormControl(this.user?.password),
+    phone: new FormControl(this.user?.phone),
   });
-
+  
   imageSrc = 'assets/images/profil.jpg';
   constructor(private route: ActivatedRoute,private _userService: UserService) { }
 
@@ -45,6 +46,18 @@ export class ProfilComponent implements OnInit {
 
   showForm(){
     this.isConnect = true;
+    this.myForm = new FormGroup({
+      id: new FormControl(this.user?.id),
+      firstname: new FormControl(this.user?.firstname),
+      lastname: new FormControl(this.user?.lastname),
+      address: new FormControl(this.user?.address),
+      zipcode: new FormControl(this.user?.zipcode),
+      city: new FormControl(this.user?.city),
+      email: new FormControl(this.user?.email),
+      password: new FormControl(this.user?.password),
+      phone: new FormControl(this.user?.phone),
+    });
+  
   }
   hideForm(){
     this.isConnect = false;
@@ -68,7 +81,12 @@ export class ProfilComponent implements OnInit {
         this._userService.updateUser(updateUser).subscribe(
   
         data=>{
-          console.log(data.id)
+          console.log(data.id);
+          this.validate = true;
+          setTimeout(() => {
+            location.reload();
+            console.log("Retardée d'une seconde.");
+          }, 1000);
         }
         
         ); 

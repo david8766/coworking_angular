@@ -18,47 +18,58 @@
         </div>
         <hr>
         <button class="btn btn-info" (click)="showForm()">Modifier vos informations personnelles</button>
+        <p class="alert alert-success m-0 text-center mt-2" role="alert" *ngIf="validate">
+            Vos informations ont bien été modifiées.
+        </p>
         <hr>
         <div class="row" *ngIf="isConnect">
             <form class="font-custom row" *ngIf="user" [formGroup]="myForm">
                 <div class="col-6">
-                    <div class="mb-3">
+                    <div class="mb-3 d-none">
                         <label for="id"> id:</label>
-                        <input type="text" value="{{ user.id }}" name="id" class="form-control" formControlName="id"/>
+                        <input type="text" value="{{ user.id }}" name="id" class="form-control" formControlName="id" />
                     </div>
                     <div class="mb-3">
                         <label for="lastname"> Nom:</label>
-                        <input type="text" value="{{ user.lastname }}" name="lastname" class="form-control" formControlName="lastname"/>
+                        <input type="text" value="{{ user.lastname }}" name="lastname" class="form-control"
+                            formControlName="lastname" />
                     </div>
                     <div class="mb-3">
                         <label for="firstname"> Prénom:</label>
-                        <input type="text" value="{{ user.firstname }}" name="firstname" class="form-control" formControlName="firstname"/>
+                        <input type="text" value="{{ user.firstname }}" name="firstname" class="form-control"
+                            formControlName="firstname" />
                     </div>
                     <div class="mb-3">
                         <label for="address"> Adresse:</label>
-                        <input type="text" value="{{ user.address }}" name="address" class="form-control" formControlName="address"/>
+                        <input type="text" value="{{ user.address }}" name="address" class="form-control"
+                            formControlName="address" />
                     </div>
                     <div class="mb-3">
                         <label for="zipcode"> Code Postal:</label>
-                        <input type="text" value="{{ user.zipcode }}" name="zipcode" class="form-control" formControlName="zipcode"/>
+                        <input type="text" value="{{ user.zipcode }}" name="zipcode" class="form-control"
+                            formControlName="zipcode" />
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="mb-3">
                         <label for="city"> Ville:</label>
-                        <input type="text" value="{{ user.city }}" name="city" class="form-control" formControlName="city"/>
+                        <input type="text" value="{{ user.city }}" name="city" class="form-control"
+                            formControlName="city" />
                     </div>
                     <div class="mb-3">
                         <label for="email"> Email:</label>
-                        <input type="text" value="{{ user.email }}" name="email" class="form-control" formControlName="email"/>
+                        <input type="text" value="{{ user.email }}" name="email" class="form-control"
+                            formControlName="email" />
                     </div>
                     <div class="mb-3">
                         <label for="password"> Password:</label>
-                        <input type="text" value="{{ user.password }}" name="password" class="form-control" formControlName="password"/>
+                        <input type="text" value="{{ user.password }}" name="password" class="form-control"
+                            formControlName="password" />
                     </div>
                     <div class="mb-3">
                         <label for="phone"> Téléphone:</label>
-                        <input type="text" value="{{ user.phone }}" name="phone" class="form-control" formControlName="phone"/>
+                        <input type="text" value="{{ user.phone }}" name="phone" class="form-control"
+                            formControlName="phone" />
                     </div>
                 </div>
                 <div class="row">
