@@ -35,7 +35,10 @@ export class HeaderComponent implements OnInit  {
   constructor(private modalService: NgbModal,
     private router: Router, private formBuilder: FormBuilder, private _userService: UserService, private _authService: AuthService) {}
   
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.userConnect);
+    console.log(this.isConnect);
+  }
 
 
   onSubmit(): void { 

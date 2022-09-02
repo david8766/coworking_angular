@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/shared/interfaces/user';
 import { UserService } from 'src/app/shared/services/user.service';
 
@@ -28,7 +28,7 @@ export class ProfilComponent implements OnInit {
   });
   
   imageSrc = 'assets/images/profil.jpg';
-  constructor(private route: ActivatedRoute,private _userService: UserService) { }
+  constructor(private route: ActivatedRoute,private _userService: UserService,private router: Router) { }
 
   ngOnInit(): void {
     const id = +this.route.snapshot.params['id'];
@@ -36,7 +36,7 @@ export class ProfilComponent implements OnInit {
     this._userService.findById(id).subscribe(
       data => {
         this.user = data;
-        console.log(data);
+        //console.log(data);
       },
       error => {
         console.log(error);
@@ -64,7 +64,7 @@ export class ProfilComponent implements OnInit {
   }
 
   updateUser(){
-        console.log(this.myForm);
+        //console.log(this.myForm);
         if (this.myForm.valid) {
           let updateUser : User = {
             id : this.myForm.get('id')?.value,
@@ -81,14 +81,15 @@ export class ProfilComponent implements OnInit {
         this._userService.updateUser(updateUser).subscribe(
   
         data=>{
-          console.log(data.id);
+          //console.log(data.id);
           this.validate = true;
           setTimeout(() => {
-            location.reload();
+            this.hideForm();
+            this.validate = false;
             console.log("Retardée d'une seconde.");
           }, 1000);
-        }
-        
+          this.ngOnInit();
+          }
         ); 
         
       }
